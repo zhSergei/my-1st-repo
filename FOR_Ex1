@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+
+	std::cout << "\tВычисление целых чисел от а до 500\n\n";
+
+	int a;
+	int sum = 0;
+
+	std::cout << "Введите целое число а -> ";
+	std::cin >> a;
+	std::cout << std::endl;
+
+	if (a > 500)
+		std::cout << "а должно быть менее или равно 500. Попробуйте еще раз!";
+
+	else
+	{
+
+		for (int i = a; i <= 500; i++)
+		{
+			if (i % 2 == 0)
+				sum += i;
+		}
+		std::cout << "Сумма чисел от " << a << " до 500 равна -> " << sum << std::endl;
+	}
+}
